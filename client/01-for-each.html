@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        const task = [
+            {title: 'Investigación', description: 'Física 3', done: false},
+            {title: 'Reporte', description: 'Laboratorio Física 3', done: false},
+            {title: 'Lectura', description: 'Literatura', done: false},
+            {title: 'Resumen', description: 'Historia', done: false},
+        ]
+        const app = document.getElementById('app');
+        task.forEach(task => {
+            app.innerHTML += `<li> Tipo: ${task.title} - Clase: ${task.description} <input type="checkbox" ${task.done ? 'checked' : ''} /></li>`;
+        });
+    </script>
+</body>
+</html>
